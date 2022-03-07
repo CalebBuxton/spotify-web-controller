@@ -26,7 +26,6 @@ function Sidebar() {
     const spotifyAPI = useSpotify()
     const [playlistId, setPlaylistId] = useRecoilState(playlistIdState)
 
-    console.log(playlistId)
     useEffect(() => {
       if (spotifyAPI.getAccessToken()) {
           spotifyAPI.getUserPlaylists().then((data) => {
